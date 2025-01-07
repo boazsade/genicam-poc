@@ -1,0 +1,5 @@
+if (VIMBA_SDK)
+  add_subdirectory(vmb_common)
+endif()
+add_subdirectory(camera_controller)
+add_subdirectory(log)

@@ -27,7 +27,7 @@ cmake --build --preset conan-release
 
 ## Host Requirements
 The host must contain the drivers for the camera - the SDK, the control the camera already installed.
-The location of the SDK must be set before, either set the value inside the main [cmake file](http://192.168.200.3:7990/projects/DAA/repos/recorder4cameras/browse/CMakeLists.txt).
+The location of the SDK must be set before, either set the value inside the main [cmake file](https://github.com/boazsade/genicam-poc/blob/1119f098f331200ccce54fb7fcbdbddccb6bec11/CMakeLists.txt).
 If the SDK support `find_package` cmake function, the we can use this to find the SDK settings.
 ### Hardware Setting
 In order to work with the cameras, you must set the network to connect to the camera. Since this is a local - direct connection, the setting for the device must be for local networking as well.
@@ -125,9 +125,9 @@ auto open_device(const std::vector<camera::DeviceInfo>& devices, const camera::C
 - You must also set the location where the SDK is installed, in the cmake variable  `SDK_INSTALL_DIR`. by default installation is done under `/opt/` directory.
 - You can find the c++ developers guide in [this link](https://docs.alliedvision.com/Vimba_X/Vimba_X_DeveloperGuide/cppAPIManual.html#transforming-images).
 - There are many code examples here such as:
-1. [capture test](http://192.168.200.3:7990/projects/DAA/repos/recorder4cameras/browse/tests/capture_test).
-2. [capture single test](http://192.168.200.3:7990/projects/DAA/repos/recorder4cameras/browse/tests/capture_single_test).
-3. [first test](http://192.168.200.3:7990/projects/DAA/repos/recorder4cameras/browse/tests/first_test).
+1. [capture test](https://github.com/boazsade/genicam-poc/tree/main/tests/capture_test).
+2. [capture single test](https://github.com/boazsade/genicam-poc/blob/1119f098f331200ccce54fb7fcbdbddccb6bec11/tests/capture_single_test/main.cpp).
+3. [first test](https://github.com/boazsade/genicam-poc/blob/1119f098f331200ccce54fb7fcbdbddccb6bec11/tests/first_case/program.cpp).
 
 The code itself is not writing as a vimba oriented code, i.e. the use of the vimba API is hidden and is not part of the external API here. most of the code that is using the SDK is located under [vimba sdk directory](http://192.168.200.3:7990/projects/DAA/repos/recorder4cameras/browse/libs/camera_controller/vimba).
 The basic flow for using the vimba SDK is:
